@@ -6,6 +6,7 @@ const typeDefs = require('./typedefs')
 const resolvers = require('./resolvers')
 
 function connectToDatabase() {
+  mongoose.Promise = global.Promise
   mongoose
     .connect(keys.MONGODB_URI, {
       useNewUrlParser: true,
