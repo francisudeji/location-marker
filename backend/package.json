@@ -1,0 +1,19 @@
+{
+  "name": "location-marker-backend",
+  "version": "1.0.0",
+  "description": "React CRUD Location Marker",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.7",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
