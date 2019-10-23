@@ -1,18 +1,19 @@
-const Location = require('./models/Location')
-
-const allLocations = [
-  { id: 1, name: 'Oshodi', longitude: 3.53231, latitude: 4.534221 },
-  { id: 2, name: 'Ojota', longitude: 1.87242, latitude: 5.241241 }
-]
+const locationService = require('./services/location-service')
 
 const resolvers = {
   Query: {
     locations: async () => {
-      const locations = await Location.find({}).catch(err => console.log(err))
-      return allLocations
+      return await locationService.getLocations()
+    }
+  },
+  Mutation: {
+    addLocation: async (parent, { name }, ctx) => {
+      const location = await locationService.getGeoLocation(name)
+
+      return await locationService.addLocation({ ...location })
     },
-    location: async (parent, args, ctx) => {
-      return allLocations.find(l => l.id === args.id)
+    deleteLocation: async (parent, args, ctx) => {
+      return await locationService.deleteLocation(args.id)
     }
   }
 }
