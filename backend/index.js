@@ -11,7 +11,8 @@ function connectToDatabase() {
     .connect(keys.MONGODB_URI, {
       useNewUrlParser: true,
       useCreateIndex: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      useFindAndModify: false
     })
 
     .then(() => console.log('Connected to MongoDB'))
