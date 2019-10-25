@@ -2,7 +2,7 @@ const locationService = require('./services/location-service')
 
 const resolvers = {
   Query: {
-    getLocations: async () => {
+    locations: async () => {
       return await locationService.getLocations()
     }
   },

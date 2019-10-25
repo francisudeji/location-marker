@@ -9,7 +9,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    getLocations: [Location]
+    locations: [Location]
   }
 
   type Mutation {
