@@ -9,18 +9,13 @@ const typeDefs = gql`
   }
 
   type Query {
-    locations: [Location]
-  }
-
-  input LocationInput {
-    name: String
-    longitude: Float
-    latitude: Float
+    getLocations: [Location]
   }
 
   type Mutation {
     addLocation(name: String!): Location
     deleteLocation(id: ID!): Location
+    editLocation(id: ID!, name: String!): Location
   }
 `
 
