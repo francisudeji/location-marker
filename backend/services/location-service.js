@@ -45,7 +45,27 @@ const locationServices = {
       console.log(error)
     }
   },
-  editLocation() {},
+  async getLocation(_id) {
+    try {
+      const location = await Location.find({ _id })
+      return location
+    } catch (error) {
+      console.log(error)
+    }
+  },
+  async editLocation(_id, newLocation) {
+    try {
+      const filter = { _id }
+      const update = { ...newLocation }
+      const editedLocation = await Location.findOneAndUpdate(filter, update, {
+        new: true
+      })
+
+      return editedLocation
+    } catch (error) {
+      console.log(error)
+    }
+  },
   async deleteLocation(_id) {
     try {
       const deleted = await Location.findOneAndDelete({ _id })
