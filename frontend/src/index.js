@@ -22,8 +22,7 @@ export const client = new ApolloClient({
       type Query {
         locations: [Location]
       }
-    `,
-    resolvers: {}
+    `
   }
 })
 
