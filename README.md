@@ -3,8 +3,8 @@
 ### How to run
 
 1. Clone this repository by running `git clone https://gitlab.com/francisudeji/location-marker.git` in your terminal.
-2. Obtain a Google **API KEY** by visiting the [Google Maps Platform]('https://cloud.google.com/maps-platform/?_ga=2.217999318.1584798621.1572112623-1130989767.1568743778#get-started'). Make sure you check **Maps** and **Places** checkboxes before hitting continue.
-3. Create a Mongodb account [here]('https://www.mongodb.com/cloud/atlas') if you don't have one, then create an cluster and obtain a connection string specific to that cluster.
+2. Obtain a Google **API KEY** by visiting the [Google Maps Platform](https://cloud.google.com/maps-platform/?_ga=2.217999318.1584798621.1572112623-1130989767.1568743778#get-started). Make sure you check **Maps** and **Places** checkboxes before hitting continue.
+3. Create a Mongodb account [here](https://www.mongodb.com/cloud/atlas) if you don't have one, then create an cluster and obtain a connection string specific to that cluster.
 4. In the `backend` folder, create a `.env` file and paste in this snippet:
 
 ```
