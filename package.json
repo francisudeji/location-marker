@@ -1,0 +1,18 @@
+{
+  "name": "location-marker",
+  "version": "1.0.0",
+  "description": "React Location Marker ",
+  "main": "backend/index.js",
+  "scripts": {
+    "build:client": "cd frontend && npm run build",
+    "start:server": "cross-env NODE_ENV=production && cd backend && npm run server",
+    "start": "npm run build:client && npm run start:server",
+    "tb": "cd backend && npm run test"
+  },
+  "repository": "https://gitlab.com/francisudeji/location-marker.git",
+  "author": "francisudeji <francis.udejiofficial@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^6.0.3"
+  }
+}
