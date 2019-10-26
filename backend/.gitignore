@@ -3,3 +3,6 @@ node_modules
 
 # environment variables
 .env
+
+# generated
+.nyc_output
