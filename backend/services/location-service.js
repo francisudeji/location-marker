@@ -40,7 +40,7 @@ const locationServices = {
   async getLocations() {
     try {
       const locations = await Location.find({})
-      return locations.reverse()
+      return locations
     } catch (error) {
       console.log(error)
     }
