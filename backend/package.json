@@ -5,7 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "test": "nyc mocha"
   },
   "dependencies": {
     "apollo-server": "^2.9.7",
@@ -17,6 +18,9 @@
     "mongoose-timestamp": "^0.6.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1"
   }
 }
