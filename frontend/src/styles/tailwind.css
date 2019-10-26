@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
+
+.sidebar {
+  transition: all 0.1s ease-in-out;
+  margin-left: 0;
+}
+
+@media all and (max-width: 768px) {
+  .sidebar {
+    margin-left: -100%;
+  }
+}
+
 @tailwind utilities;
