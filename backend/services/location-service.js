@@ -40,7 +40,7 @@ const locationServices = {
   async getLocations() {
     try {
       const locations = await Location.find({})
-      return locations
+      return locations.reverse()
     } catch (error) {
       console.log(error)
     }
@@ -69,7 +69,6 @@ const locationServices = {
   async deleteLocation(_id) {
     try {
       const deleted = await Location.findOneAndDelete({ _id })
-      console.log({ deleted })
       return deleted
     } catch (error) {
       console.log(error)
