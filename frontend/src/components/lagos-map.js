@@ -10,8 +10,18 @@ import { formatLocation } from '../utils'
 import { useGetLocationsQuery } from '../hooks/use-location'
 
 function Map() {
-  const { data, error, loading } = useGetLocationsQuery()
+  const { data, error } = useGetLocationsQuery()
   const [selectedLocation, setSelectedLocation] = useState(null)
+
+  if (error) {
+    return (
+      <div className='flex items-center justify-center'>
+        <span className='text-2xl text-gray-900'>
+          There was an error fetching google maps.
+        </span>
+      </div>
+    )
+  }
 
   return (
     <GoogleMap
