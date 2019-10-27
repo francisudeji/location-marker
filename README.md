@@ -15,7 +15,7 @@ GOOGLE_API_KEY=YOUR_GOOGLE_MAP_API_KEY
 5. In the `frontend` folder, create a `.env.development` file and paste in this snippet:
 
 ```
-GOOGLE_API_KEY=YOUR_GOOGLE_MAP_API_KEY
+REACT_APP_GOOGLE_API_KEY=YOUR_GOOGLE_MAP_API_KEY
 ```
 
 6. Replace all placeholder values with your actual credentials and add all `.env` files to `.gitignore`.
