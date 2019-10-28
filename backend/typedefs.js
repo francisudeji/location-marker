@@ -2,20 +2,20 @@ const { gql } = require('apollo-server')
 
 const typeDefs = gql`
   type Location {
-    id: ID
-    name: String
-    longitude: Float
-    latitude: Float
+    id: ID!
+    name: String!
+    longitude: Float!
+    latitude: Float!
   }
 
   type Query {
-    locations: [Location]
+    locations: [Location]!
   }
 
   type Mutation {
-    addLocation(name: String!): Location
+    addLocation(name: String!): Location!
     deleteLocation(id: ID!): Location
-    editLocation(id: ID!, name: String!): Location
+    editLocation(id: ID!, name: String!): Location!
   }
 `
 

@@ -5,7 +5,7 @@ import {
   useEditLocationMutation
 } from '../hooks/use-location'
 
-function LocationForm({ type, editId, location, setLocation }) {
+function LocationForm({ type, setType, editId, location, setLocation }) {
   const addMutation = useAddLocationMutation(location)
   const editMutation = useEditLocationMutation(editId, location)
 
@@ -14,7 +14,14 @@ function LocationForm({ type, editId, location, setLocation }) {
       className='flex justify-between p-3 border-b flex-1'
       onSubmit={e => {
         e.preventDefault()
-        type === 'add' ? addMutation() : editMutation()
+        if (type === 'add') {
+          addMutation()
+          setLocation('')
+        } else {
+          editMutation()
+          setType('add')
+          setLocation('')
+        }
       }}
     >
       <div className='flex-1 mr-2'>

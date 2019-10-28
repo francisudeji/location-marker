@@ -10,7 +10,7 @@ const locationServices = {
       const data = await response.data
 
       if (data.status === 'ZERO_RESULTS') {
-        return data
+        throw Error(data)
       }
 
       const {
@@ -24,7 +24,7 @@ const locationServices = {
         latitude: location.lat
       }
     } catch (err) {
-      console.log('Error fetching location info', { err })
+      throw Error(err)
     }
   },
   async addLocation(newLocation) {
@@ -34,15 +34,15 @@ const locationServices = {
 
       return savedLocation
     } catch (error) {
-      console.log(error)
+      throw Error(err)
     }
   },
   async getLocations() {
     try {
       const locations = await Location.find({})
-      return locations
+      return locations.reverse()
     } catch (error) {
-      console.log(error)
+      throw Error(err)
     }
   },
   async getLocation(_id) {
@@ -50,7 +50,7 @@ const locationServices = {
       const location = await Location.find({ _id })
       return location
     } catch (error) {
-      console.log(error)
+      throw Error(err)
     }
   },
   async editLocation(_id, newLocation) {
@@ -63,7 +63,7 @@ const locationServices = {
 
       return editedLocation
     } catch (error) {
-      console.log(error)
+      throw Error(err)
     }
   },
   async deleteLocation(_id) {
@@ -71,7 +71,7 @@ const locationServices = {
       const deleted = await Location.findOneAndDelete({ _id })
       return deleted
     } catch (error) {
-      console.log(error)
+      throw Error(err)
     }
   }
 }

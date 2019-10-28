@@ -26,7 +26,7 @@
     "test-all": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/styles/tailwind.css -o src/styles/index.css --watch",
-    "test:coverage": "npm run test -- --watchAll false --coverage"
+    "test:coverage": "npm run test --watchAll false --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"

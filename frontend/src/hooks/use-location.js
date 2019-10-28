@@ -117,16 +117,17 @@ export function useDeleteLocationMutation(_id) {
           query: CACHED_LOCATIONS_QUERY
         })
 
-        const deletedLocationId = data.deleteLocation.id
-
-        cache.writeQuery({
-          query: CACHED_LOCATIONS_QUERY,
-          data: {
-            locations: existingLocations.locations.filter(
-              l => l.id !== deletedLocationId
-            )
-          }
-        })
+        const deletedLocation = data.deleteLocation
+        if (deletedLocation !== null) {
+          cache.writeQuery({
+            query: CACHED_LOCATIONS_QUERY,
+            data: {
+              locations: existingLocations.locations.filter(
+                l => l.id !== deletedLocation.id
+              )
+            }
+          })
+        }
       }
     })
 

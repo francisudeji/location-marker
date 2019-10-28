@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import App from '../App'
 import { gql } from 'apollo-boost'
 import { MockedProvider } from '@apollo/react-testing'
-import { render, waitForElement } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 const mocks = [
   {

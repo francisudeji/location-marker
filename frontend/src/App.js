@@ -40,6 +40,7 @@ function App() {
           <LocationForm
             editId={editId}
             type={type}
+            setType={setType}
             location={location}
             setLocation={setLocation}
           />
@@ -58,6 +59,7 @@ function App() {
             <LocationForm
               editId={editId}
               type={type}
+              setType={setType}
               location={location}
               setLocation={setLocation}
             />
@@ -65,7 +67,7 @@ function App() {
 
           {loading && (
             <div data-testid='loading'>
-              <FaSpinner />
+              <FaSpinner className='text-center mx-auto mt-10' />
             </div>
           )}
 
@@ -106,4 +108,4 @@ function App() {
   )
 }
 
-export default App
+export default React.memo(App)

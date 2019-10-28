@@ -19,7 +19,7 @@ function LocationList({
     if (_id !== null) {
       deleteMutation()
     }
-  }, [_id])
+  }, [_id, deleteMutation])
   return (
     <ul data-testid='location-list' className='my-3'>
       <li className='flex items-center mt-3 rounded shadow-md border-b p-3'>
@@ -64,4 +64,4 @@ function LocationList({
   )
 }
 
-export default LocationList
+export default React.memo(LocationList)
