@@ -5,10 +5,8 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import ApolloClient from 'apollo-boost'
 import './styles/index.css'
 
-const dev = process.env.NODE_ENV !== 'production'
-
 export const client = new ApolloClient({
-  uri: dev ? 'http://localhost:4000' : '/graphql',
+  uri: 'http://localhost:4000',
   clientState: {
     defaults: {
       locations: [{}]

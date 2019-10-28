@@ -21,7 +21,7 @@ function LocationList({
     }
   }, [_id])
   return (
-    <ul className='my-3'>
+    <ul data-testid='location-list' className='my-3'>
       <li className='flex items-center mt-3 rounded shadow-md border-b p-3'>
         <div className='flex-1'>
           <div>
