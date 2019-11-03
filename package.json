@@ -1,12 +1,27 @@
 {
-  "name": "location-marker",
+  "name": "location-marker-backend",
   "version": "1.0.0",
-  "description": "Location Marker",
-  "main": "backend/index.js",
-  "repository": "https://github.com/francisudeji/location-marker.git",
-  "author": "francisudeji <francis.udejiofficial@gmail.com>",
+  "description": "React CRUD Location Marker",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "cd backend && npm install && npm run start"
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "test": "nyc mocha"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.7",
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8",
+    "mongoose": "^5.7.6",
+    "mongoose-timestamp": "^0.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1"
   }
 }
