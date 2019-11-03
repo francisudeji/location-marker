@@ -7,7 +7,9 @@ const { connectToDatabase } = require('./config/db')
 const server = new ApolloServer({
   cors: true,
   typeDefs,
-  resolvers
+  resolvers,
+  introspection: true,
+  playground: true
 })
 
 connectToDatabase()
