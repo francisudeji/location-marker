@@ -1,0 +1,12 @@
+{
+  "name": "location-marker",
+  "version": "1.0.0",
+  "description": "Location Marker",
+  "main": "backend/index.js",
+  "repository": "https://github.com/francisudeji/location-marker.git",
+  "author": "francisudeji <francis.udejiofficial@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd backend && npm install && npm run start"
+  }
+}

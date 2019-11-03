@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise
 function connectToDatabase(uri) {
   return new Promise((resolve, reject) => {
     mongoose
-      .connect(uri || process.env.MONGODB_URI, {
+      .connect(uri || keys.MONGODB_URI, {
         useNewUrlParser: true,
         useCreateIndex: true,
         useUnifiedTopology: true,
