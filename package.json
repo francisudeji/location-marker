@@ -7,6 +7,6 @@
   "author": "francisudeji <francis.udejiofficial@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "cd backend && npm install && npm run start"
+    "start": "cd backend && npm run start"
   }
 }
