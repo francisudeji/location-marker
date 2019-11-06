@@ -8,7 +8,7 @@ import './styles/index.css'
 const dev = process.env.NODE_ENV !== 'production'
 
 export const client = new ApolloClient({
-  uri: dev ? 'http://localhost:4000' : "/graphql",
+  uri: dev ? 'http://localhost:4000' : "https://limitless-wildwood-72617.herokuapp.com/graphql",
   clientState: {
     defaults: {
       locations: [{}]
